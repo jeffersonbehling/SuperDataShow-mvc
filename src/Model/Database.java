@@ -28,4 +28,8 @@ public Connection connection;
 			System.out.println("Error disconnecting database: " + ex.getMessage());
 		}
 	}
+	
+	public Connection getConnection() {
+		return connection;
+	}
 }
