@@ -35,7 +35,7 @@ public class ProjectorsController {
 			pstmt.close();
 			
 			return true;
-			
+
 		} catch (SQLException e) {
 			System.out.println("Error: " + e.getMessage());
 		}

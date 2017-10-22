@@ -119,6 +119,7 @@ public class add extends JFrame {
 		initComponents();
 		actions();
 	}
+	
 	private void initComponents() {
 		setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Sistemas Git\\Java\\SuperDataShow-mvc\\resource\\img\\company.png"));
@@ -258,7 +259,13 @@ public class add extends JFrame {
 							
 							projector.setBrand(txtBrand.getText().toString());
 							projector.setModel(txtModel.getText().toString());
-							projector.setAnsiLumens(Integer.parseInt(txtAnsiLumens.getText().toString()));
+							
+							if (!txtAnsiLumens.getText().equals("")) {
+								projector.setAnsiLumens(Integer.parseInt(txtAnsiLumens.getText().toString()));	
+							} else {
+								projector.setAnsiLumens(0);
+							}
+							
 							projector.setProjectorState(cbxProjectorState.getSelectedItem().toString());
 							projector.setSerialNumber(txtSerialNumber.getText().toString());
 							
